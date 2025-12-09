@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/carousel";
 import { Quote } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import olubode from "@/assets/olubode.jpg";
+import yinka from "@/assets/yinka.jpg";
 
 interface ProminentFigures {
   id: number;
@@ -19,21 +21,21 @@ interface ProminentFigures {
 const prominentFigures: ProminentFigures[] = [
   {
     id: 1,
-    name: "Chief Adewunmi",
-    field: "Establish Ipoti's First Sawmill and Bakery",
-    image: "https://images.unsplash.com/photo-1532408840957-031d8034aeef?w=800&h=600&fit=crop"
+    name: "Yinka Ayefele",
+    field: "Music Producer, Gospel Singer, Song writer",
+    image: yinka
   },
   {
     id: 2,
-    name: "Yinka Ayefele",
-    field: "Music Producer, Gospel Singer, Song writer",
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&fit=crop"
+    name: "Caleb Olubolade",
+    field: "Retired Navy Captain, Formal Military Administrator of Bayelsa State",
+    image: olubode
   },
   {
     id: 3,
-    name: "Caleb Olubolade",
-    field: "Retired Navy Captain, Formal Military Administrator of Bayelsa State",
-    image: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&h=600&fit=crop"
+    name: "Chief Adewunmi",
+    field: "Establish Ipoti's First Sawmill and Bakery",
+    image: "https://images.unsplash.com/photo-1532408840957-031d8034aeef?w=800&h=600&fit=crop"
   },
   {
     id: 4,

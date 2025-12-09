@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroCommunity from "@/assets/hero-community.jpg";
 import heroDevelopment from "@/assets/hero-development.jpg";
+import palace from "@/assets/palace.jpg";
 
 const slides = [
   {
-    image: heroCommunity,
+    image: palace,
     title: "Welcome to Ipoti",
     subtitle: "Preserving Culture, Building Community",
     description: "Celebrating our rich heritage and vibrant traditions",

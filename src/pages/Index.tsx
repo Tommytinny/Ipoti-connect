@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Heart, Users, Briefcase } from "lucide-react";
 import traditionalLeader from "@/assets/traditional-leader.jpg";
 import palace from "@/assets/palace.jpg";
+import heroCommunity from "@/assets/hero-community.jpg";
 
 const Index = () => {
   return (
@@ -79,7 +80,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute lg:block -inset-4 bg-accent/20 rounded-lg transform rotate-3 hidden" />
                 <img
-                  src={palace}
+                  src={heroCommunity}
                   alt="ipoti palace"
                   className="relative lg:block rounded-lg shadow-2xl w-full lg:h-[500px] object-cover hidden"
                 />
@@ -155,7 +156,7 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div className="absolute -inset-4 bg-accent/20 rounded-lg transform rotate-3" />
+                <div className="absolute  -inset-1 bg-accent/20 rounded-lg transform rotate-3" />
                 <img
                   src={traditionalLeader}
                   alt="Traditional Leader"
