@@ -57,13 +57,13 @@ const HeroCarousel = () => {
             alt={slide.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 z-20 flex items-center">
-            <div className="container mx-auto px-4">
+          <div className="absolute inset-0 z-20 flex items-center lg:mt-[11rem]">
+            <div className="container mx-auto lg:px-10">
               <div className="max-w-3xl animate-fade-in">
                 <p className="text-accent text-sm md:text-base font-medium mb-3 tracking-wide">
                   {slide.description}
                 </p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-foreground mb-4 text-balance">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-primary-foreground mb-4 text-balance">
                   {slide.title}
                 </h1>
                 <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
@@ -90,7 +90,7 @@ const HeroCarousel = () => {
         </div>
       ))}
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows 
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-card/80 hover:bg-card flex items-center justify-center text-foreground transition-all"
@@ -104,7 +104,7 @@ const HeroCarousel = () => {
         aria-label="Next slide"
       >
         <ChevronRight size={24} />
-      </button>
+      </button>*/}
 
       {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">

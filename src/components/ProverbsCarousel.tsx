@@ -73,13 +73,14 @@ const ProverbsCarousel = () => {
     <section className="py-16 md:py-24 px-4 md:px-8 bg-heritage-dark text-white relative overflow-hidden">
       {/* Dark atmospheric background */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-20 "
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1532408840957-031d8034aeef?w=1920&h=1080&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12 max-w-4xl mx-auto">
@@ -112,7 +113,25 @@ const ProverbsCarousel = () => {
           <CarouselContent className="-ml-4">
             {proverbs.map((proverb, index) => (
               <CarouselItem key={proverb.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="group">
+                <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer"
+              >
+                <img
+                  src={proverb.image}
+                  alt={proverb.attribution}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-hero-overlay/90 via-hero-overlay/40 to-transparent opacity-1 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
+                    <h3 className="text-lg font-semibold">{proverb.subtitle}</h3>
+                    <span className="inline-block px-3 py-1 bg-primary text-accent-foreground text-xs font-medium rounded-full mb-2">
+                      {proverb.attribution}
+                    </span>
+                  </div>
+                </div>
+              </div>
+                {/*<div className="group">
                   <div className="bg-white text-foreground rounded-lg overflow-hidden shadow-card hover:shadow-hover transition-smooth h-full">
                     <div className="relative h-64 overflow-hidden">
                       <img
@@ -136,7 +155,7 @@ const ProverbsCarousel = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>*/}
               </CarouselItem>
             ))}
           </CarouselContent>

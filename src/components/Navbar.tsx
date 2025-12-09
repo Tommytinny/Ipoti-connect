@@ -42,7 +42,7 @@ const Navbar = () => {
               <span className="text-primary-foreground font-serif text-xl font-bold">I</span>
             </div>
             <div className="hidden md:block">
-              <h2 className="text-xl font-serif font-bold text-foreground group-hover:text-primary transition-colors">
+              <h2 className="text-xl font-sans font-bold text-foreground group-hover:text-primary transition-colors">
                 Ipoti Town
               </h2>
               <p className="text-xs text-muted-foreground">Unity in Heritage</p>
@@ -55,14 +55,14 @@ const Navbar = () => {
               <NavLink
                 key={link.path}
                 to={link.path}
-                className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
+                className="px-4 py-2 font-sans font-semibold text-foreground hover:text-primary transition-colors relative group"
                 activeClassName="text-primary"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </NavLink>
             ))}
-            <Button className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button className="ml-4 bg-primary hover:bg-primary/90 text-accent-foreground px-8">
               Donate
             </Button>
           </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors border border-solid  border-primary rounded-lg"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -92,7 +92,7 @@ const Navbar = () => {
                   {link.name}
                 </NavLink>
               ))}
-              <Button className="mx-4 mt-2 bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button className="mx-4 mt-2 bg-primary hover:bg-accent/90 text-accent-foreground">
                 Donate
               </Button>
             </div>

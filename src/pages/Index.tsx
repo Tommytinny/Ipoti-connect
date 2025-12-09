@@ -3,11 +3,13 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import  PublicationsSection  from "@/components/PublicationsSection";
 import  ProverbsCarousel from "@/components/ProverbsCarousel";
+import ProminentCarousel from "@/components/ProminentCarousel";
 import  CultureStoriesCarousel  from "@/components/CultureStoriesCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Heart, Users, Briefcase } from "lucide-react";
 import traditionalLeader from "@/assets/traditional-leader.jpg";
+import palace from "@/assets/palace.jpg";
 
 const Index = () => {
   return (
@@ -19,15 +21,15 @@ const Index = () => {
         <HeroCarousel />
       </div>
 
-      {/* Welcome Section */}
+      {/* Welcome Section 
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-5xl font-sans font-bold mb-6 text-primary">
               Welcome to Ipoti
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed">
               Ipoti is a historic town in Ekiti State, Nigeria, known for its rich cultural heritage, 
               vibrant community spirit, and commitment to progress. We are a people united by tradition 
               and driven by the vision of a prosperous future for all our indigenes, both at home and in the diaspora.
@@ -57,7 +59,7 @@ const Index = () => {
                 description: "Connecting our people worldwide to support growth",
               },
             ].map((item, index) => (
-              <Card key={index} className="border-border hover:shadow-lg transition-all animate-fade-in">
+              <Card key={index} className="border hover:shadow-lg transition-all animate-fade-in border-t-[6px] border-t-primary border-solid">
                 <CardContent className="p-6 text-center">
                   <div className="mb-4 flex justify-center">{item.icon}</div>
                   <h3 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h3>
@@ -68,21 +70,82 @@ const Index = () => {
           </div>
         </div>
       </section>
+      */}
 
-      {/* Leadership Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-6 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-foreground">
+              <div className="relative">
+                <div className="absolute lg:block -inset-4 bg-accent/20 rounded-lg transform rotate-3 hidden" />
+                <img
+                  src={palace}
+                  alt="ipoti palace"
+                  className="relative lg:block rounded-lg shadow-2xl w-full lg:h-[500px] object-cover hidden"
+                />
+              </div>
+            </div>
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl md:text-4xl font-sans font-bold mb-6 text-primary">
+                Welcome to Ipoti
+              </h2>
+              <div className="w-24 h-1 bg-accent mb-6" />
+              <p className="text-lg mb-6 leading-relaxed">
+                Ipoti is a historic town in Ekiti State, Nigeria, known for its rich cultural heritage, 
+              vibrant community spirit, and commitment to progress. We are a people united by tradition 
+              and driven by the vision of a prosperous future for all our indigenes, both at home and in the diaspora.
+              </p>
+              {[
+              {
+                icon: <Users className="text-primary" size={20} />,
+                title: "Community Unity",
+                description: "Bringing Ipoti indigenes together across the world",
+              },
+              {
+                icon: <Calendar className="text-primary" size={20} />,
+                title: "Cultural Events",
+                description: "Celebrating our heritage through festivals and traditions",
+              },
+              {
+                icon: <Briefcase className="text-primary" size={20} />,
+                title: "Development Projects",
+                description: "Building infrastructure for a better tomorrow",
+              },
+              {
+                icon: <Heart className="text-primary" size={20} />,
+                title: "Diaspora Support",
+                description: "Connecting our people worldwide to support growth",
+              },
+            ].map((item, index) => (
+              <div key={index} className="flex gap-x-4 mt-6 items-center">
+                <div className="">{item.icon}</div>
+                <div>
+                  <h3 className="font-bold font-mono">{item.title}</h3>
+                  <p className="font-light">{item.description}</p>
+                </div>
+              </div>
+            ))}
+              
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="py-20 bg-[#F8F4F4]">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl md:text-4xl font-sans font-bold mb-6 text-primary">
                 Our Traditional Leadership
               </h2>
               <div className="w-24 h-1 bg-accent mb-6" />
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg mb-6 leading-relaxed">
                 The leadership of Ipoti is rooted in centuries of tradition and wisdom. Our traditional rulers 
                 guide the community with dignity, preserving our cultural values while embracing progressive development.
               </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg mb-8 leading-relaxed">
                 Through their guidance, Ipoti continues to thrive as a beacon of cultural preservation 
                 and community development in Ekiti State.
               </p>
@@ -103,9 +166,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <PublicationsSection />
-      <ProverbsCarousel />
-      <CultureStoriesCarousel />
+      <ProminentCarousel />
 
 
       {/* slider 
