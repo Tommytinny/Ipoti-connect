@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-serif text-xl font-bold">I</span>
             </div>
-            <div className="hidden md:block">
+            <div className="md:block">
               <h2 className="text-xl font-sans font-bold text-foreground group-hover:text-primary transition-colors">
                 Ipoti Town
               </h2>
